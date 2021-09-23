@@ -32,11 +32,86 @@ Example:
    - `charAt` accepts a index (number data type) and return the character on that index in the string.
 
 2. `toUpperCase`
+   - Parameter: No Parameters
+   - Return: Returns a new string converted to UpperCase. 
+   - Example:
+     ```js
+     let name = 'Arya Stark';
+     console.log(name.toUpperCase());//'ARYA STARK'
+     let sentance = 'A quick brown fox jumped over a lazy dog';
+     console.log(sentance.UpperCase()); // "A QUICK BROWN FOX JUMPED OVER A LAZY DOG"
+     let houseName = 'Starks';
+     console.log(houseName.toUpperCase()); // "STARKS"
+     ```
+   - `.toUpperCase() this method converts the calling strings characters to Uppercase.
+
 3. `toLowerCase`
+   - Parameter: No Parameters
+   - Return: Returns a new string converted to LowerCase. 
+   - Example:
+     ```js
+     let name = 'ARYA STARK';
+     console.log(name.toLowerCase());//'arya Stark'
+     let sentance = 'A QUICK BROWN FOX JUMPED OVER A LAZY DOG';
+     console.log(sentance.toLowerCase()); // "a quick brown fox jumped over a lazy dog"
+     let houseName = 'STARKS';
+     console.log(houseName.toLowerCase()); // "starks"
+     ```
+   - `.toLowerCase() this method converts the calling strings characters to LowerCase.
 4. `trim`
+   - Parameter: No Parameters
+   - Return: Returns a the string with all the whitespaces removed from both the ends.
+   - Example:
+     ```js
+     let name = ' ARYA STARK ';
+     console.log(name.trim());//'ARYA STARK'
+     let sentance = '   A QUICK BROWN FOX JUMPED OVER A LAZY DOG ';
+     console.log(sentance.trim()); // "A QUICK BROWN FOX JUMPED OVER A LAZY DOG"
+     let houseName = ' STARKS ';
+     console.log(houseName.trim()); // "STARKS"
+     ```
+   - `.trim() this method removes the whitespaces in the string present on both the ends.
+      
 5. `trimEnd`
+  - Parameter: No Parameters
+   - Return: Returns  the string with  the whitespaces removed from  the end of the string.
+   - Example:
+     ```js
+     let name = ' ARYA STARK ';
+     console.log(name.trimEnd());//' ARYA STARK'
+     let sentance = '   A QUICK BROWN FOX JUMPED OVER A LAZY DOG ';
+     console.log(sentance.trimEnd()); // "  A QUICK BROWN FOX JUMPED OVER A LAZY DOG"
+     let houseName = 'STARKS ';
+     console.log(houseName.trimEnd()); // "STARKS"
+     ```
+   - `.trimEnd() this method removes the whitespaces in the string present on the end of the string.
 6. `trimStart`
+   - Parameter: No Parameters
+   - Return: Returns  the string with  the whitespaces removed from  the start of the string.
+   - Example:
+     ```js
+     let name = ' ARYA STARK ';
+     console.log(name.trimStart());//'ARYA STARK '
+     let sentance = '   A QUICK BROWN FOX JUMPED OVER A LAZY DOG ';
+     console.log(sentance.trimStart()); // "A QUICK BROWN FOX JUMPED OVER A LAZY DOG "
+     let houseName = ' STARKS';
+     console.log(houseName.trimStart()); // "STARKS"
+     ```
+   - `.trimStart() this method removes the whitespaces in the string present on the start of the string.
+
 7. `concat`
+    - Parameter: The parameter accepts string data and any number of strings can be added in the parameters. Abhishek.concat(' ',Agarwal); . 
+   - Return: Returns  the string with  the whitespaces removed from  the start of the string.
+   - Example:
+     ```js
+     const firstName="Abhishek";
+     const lastName="Agarwal";
+     const middleName="Gopal";
+     console.log(firstName.concat(' ', lastName));// "Abhishek Agarwal"
+     console.log(firstName.concat(' ',middleName,' ',lastName));//"Abhishek Gopal Agarwal"
+     console.log(firstName.concat('@',middleName,'@',lastName));//
+     ```
+   - `.trimStart() this method removes the whitespaces in the string present on the start of the string.
 8. `endsWith`
 9. `includes`
 10. `indexOf`

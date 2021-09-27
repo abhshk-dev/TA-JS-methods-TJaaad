@@ -100,8 +100,8 @@ Example:
    - `.trimStart() this method removes the whitespaces in the string present on the start of the string.
 
 7. `concat`
-    - Parameter: The parameter accepts string data and any number of strings can be added in the parameters. Abhishek.concat(' ',Agarwal); . 
-   - Return: Returns  the string with  the whitespaces removed from  the start of the string.
+   - Parameter: The parameter accepts string data and any number of strings can be added in the parameters. Abhishek.concat(' ',Agarwal); . 
+   - Return: Returns a new string combined with the new text.
    - Example:
      ```js
      const firstName="Abhishek";
@@ -109,15 +109,87 @@ Example:
      const middleName="Gopal";
      console.log(firstName.concat(' ', lastName));// "Abhishek Agarwal"
      console.log(firstName.concat(' ',middleName,' ',lastName));//"Abhishek Gopal Agarwal"
-     console.log(firstName.concat('@',middleName,'@',lastName));//
+     console.log(firstName.concat('@',middleName,'@',lastName));//"Abhishek@Gopal@Agarwal"
      ```
-   - `.trimStart() this method removes the whitespaces in the string present on the start of the string.
+   - `.concat(); this function concatenates two or more strings and returns a new string.
 8. `endsWith`
+   - Parameter: the string to be searched is put in the parameters, and length of the string which is being searched(optional).
+   - Return: Returns true or false.
+   - Example:
+     ```js
+     const firstName="Abhishek";
+     const lastName="Agarwal";
+     const middleName="Gopal";
+     console.log(firstName.endsWith('k'));// True
+     console.log(lastName.endsWith('l',6));//false
+     console.log(middleName.endsWith('l',5));//true
+     ```
+   - endsWith(searchString):- This method searches the last of the String for the characters/string which are being passed in the parameters.
 9. `includes`
+   - Parameter: the string to be searched is put in the parameters, and length of the string which is being searched(optional), this method is case sensitive.
+   - Return: Returns true or false.
+   - Example:
+     ```js
+     const firstName="Abhishek";
+     const lastName="Agarwal";
+     const middleName="Gopal";
+     console.log(firstName.includes('k'));// True
+     console.log(lastName.incleudes('L',7));//false
+     console.log(middleName.includes('l',5));//true
+     ```
+   - includes(searchString,length(optional)):- This method searches for the string passed in the parameters. this method is case sensitive ,it returns true or false.
 10. `indexOf`
+   - Parameter: searchstring is passed in the parameters(string data type).fromIndex can also be passed in the parameters(number data type) it searches for the string from the index passed in the parameters.
+   - Return: Returns the index of the particular search string.If the string is not found then it returns -1.
+   - Example:
+     ```js
+     const firstName="Abhishek";
+     const lastName="Agarwal";
+     const middleName="Gopal";
+     console.log(firstName.indexOf('k'));// 7
+     console.log(lastName.indexOf('B'));//-1
+     console.log(lastName.indexOf('a',3));//true
+     ```
+   - The indexOf() method returns the position of the first occurence of a specified value in a string. This method  is case sensitive.
 11. `lastIndexOf`
+   - Parameter: searchstring is passed in the parameters(string data type).fromIndex can also be passed in the parameters(number data type) it searches for the string from the index passed in the parameters.
+   - Return: Returns the index of the particular search string.If the string is not found then it returns -1.
+   - Example:
+     ```js
+     const firstName="Abhishek";
+     const lastName="Agarwal";
+     const middleName="Gopal";
+     console.log(firstName.lastIndexOf('h'));// 5
+     console.log(lastName.lastIndexOf('a'));//5
+     console.log(lastName.lastIndexOf('a',4));//2
+     ```
+   - The lastIndexOf() method is similar to indexOf method it also searches for the specified string but the search is performed backwards. This method  is case sensitive.
 12. `padEnd`
+   - Parameter: targetLength (number data type) or max length to be entered after the string has been padded. A string parameter can also be passed to pad the end of the string.
+   - Return: Returns string.
+   - Example:
+     ```js
+     const firstName="Abhishek";
+     const lastName="Agarwal";
+     const middleName="Gopal";
+     console.log(firstName.padEnd(9,'k'));// "Abhishekk"
+     console.log(lastName.padEnd(10));//"Agarwal   "
+     console.log(middleName.indexOf(6,"@"));//"Gopal@"
+     ```
+   - The indexOf() method returns the position of the first occurence of a specified value in a string. This method  is case sensitive.
 13. `padStart`
+   - Parameter: targetLength (number data type) or max length to be entered after the string has been padded. A string parameter can also be passed to pad the end of the string.
+   - Return: Returns string.
+   - Example:
+     ```js
+     const firstName="Abhishek";
+     const lastName="Agarwal";
+     const middleName="Gopal";
+     console.log(firstName.padStart(10,'.'));// "..Abhishek"
+     console.log(lastName.padEnd(10));//"Agarwal   "
+     console.log(middleName.indexOf(6,"@"));//"Gopal@"
+     ```
+   - The indexOf() method returns the position of the first occurence of a specified value in a string. This method  is case sensitive.
 14. `repeat`
 15. `replace`
 16. `slice`

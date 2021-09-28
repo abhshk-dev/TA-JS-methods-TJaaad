@@ -66,5 +66,8 @@ for(let chars of message){
     console.log(chars);
 }
 // Split all the words in message (split by " " space) and store it in a variable messageArray
-let messageArray="";
+let messageArray=message.split(" ");
 // Log all the words of messageArray
+for(let words of messageArray){
+    console.log(words);
+}

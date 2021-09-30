@@ -34,6 +34,19 @@ Example:
    - No it does not mutate the original array
 
 2. `join`
+    - Parameter: No parameter. can mention a specific separator which is optional. Array.join('.'); 
+   - Return: A string with all the elements joined and separated by the same separator used in the array or as passed in the parameters.
+   - Example:
+     ```js
+     let numbers = [1, 2, 3];
+     numbers.join(); //'1,2,3'
+     let numbers=[1,2,3,4];
+     numbers.join('@');//'1@2@3@4'
+     let colors = ['red', 'green', 'blue'];
+     colors.join(''); // 'redgreenblue'
+     ```
+   - `concat` accepts n number of values and returns one array with all the values in same order. It does not change the original array.
+   - No it does not mutate the original array
 3. `flat`
 4. `push`
 5. `indexOf`

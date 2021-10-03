@@ -1,7 +1,8 @@
 let fruits = ['Banana', 'Orange', 'Apple', 'Mango'];
 
 // Add a new element ('Papaya') into fruits array at end
-
+let push= fruits.push('Papaya');
+console.log(push);
 // Remove the last element from fruits array
 
 // Log the current length of fruits array

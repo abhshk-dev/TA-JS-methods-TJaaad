@@ -41,9 +41,9 @@ console.log(cat1.concat(' to ',to));
 /*
 6. Does from, to and quote ends with "rk". Check all three.
 */
-console.log(from.includes('rk'));
-console.log(quote.includes('rk'));
-console.log(to.includes('rk'));
+console.log(from.endsWith('rk'));
+console.log(quote.endsWith('rk'));
+console.log(to.endsWith('rk'));
 
 /*
 7. Does quote includes the word "Only"
@@ -62,50 +62,68 @@ console.log(quote.indexOf('we'));
 /*
 10. Split the quote into individual word and store it in a variable name quoteSplitted
 */
-let quoteSplitted= quote.split(3);
+let quoteSplitted= quote.split(" ");
 
 /*
 11. Change the word "today" in quoteSplitted to "tomorrow" and join all the words to form a sentance.
 */
-
+let index=quoteSplitted.indexOf("today");
+quoteSplitted[index]="tommorow";
+console.log(quoteSplitted.join(' '));
 /*
 12. Find the index of second "o" in quote. Use indexOf
 */
-
+let indeX= quote.indexOf('o',12);
 /*
 13. Find the last index of letter "a" in quote.
 */
+let lastIndofA=quote.lastIndexOf('a');
 
 /*
 14. Find the second last index of letter "a" in quote.
 */
-
+console.log(quote.lastIndexOf('a',lastIndofA-1))
 /*
 15. Make the quote 70 character long. If it has less characters add rest as .......
 Example: "Hello" (convert to 10 characters) => "Hello....."
 Store the output in a new variable
 */
-
+let max=70;
+let length=quote.length;
+/*
+for(let i=length;i<=max;i++){
+  quote=quote+'.';
+  length=quote.length;
+}*/
+let newQuote=quote+".".repeat(max-length);
 /*
 16. Do same as (15) but the ... should come in start. Store the output in a new variable
 */
+let newStartQuote=".".repeat(max-length)+quote;
 
 /*
 17. Log the repeat of "Hello World!" 10 times.
 */
-
+console.log("hello world".repeat(10));
 /*
 18. Replace today to tomorrow in quote.
 */
-
+console.log(quote.replace('today','tomorrow'));
 /*
 19. Replace Stark to Lannister in quoteTo
 */
+console.log(quote.replace("Stark","Lannister"));
 
 /*
 20. Make the quote of length 30 and put ... at the end. (use slice)
 */
+let limit=quote.slice(0,30)+"....";
 
 /*
 21. Find out does quote, from, to starts with "A"
 */
+console.log(quote.startsWith('A'));
+console.log(from.startsWith('A'));
+console.log(to.startsWith('A'));
+
+

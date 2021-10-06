@@ -9,7 +9,7 @@ function double(num) {
   alert(num);
 }
 let doubleNum = numbers.forEach(double);
-```
+``` 
 ![](./img/main.png)
 
 

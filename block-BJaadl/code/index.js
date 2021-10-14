@@ -12,16 +12,7 @@ let words = [
 // - Write a function findLongestWord that takes an array of words and returns the longest word from the array. (Use above array "words" to test it). If there are 2 with the same length, it should return the first occurrence.
 
 function findLongestWord(arrWords){
-  let longestWord=0;
-  let wordlong=' ';
-  for(word of arrWords){
-    if(word.length>longestWord){
-      longestWord=word.length;
-      wordlong=word;
-    }
-}
-return longestWord;
-return wordlong;
+  return [...arrWords].sort((a,b)=>a.length-b.length).pop();
 }
 findLongestWord(words);
 
@@ -135,3 +126,6 @@ let strings = [
 ];
 
 // - Write a function averageWordLength that receives an array of words2 and calculate the average length of the words.
+function averageWordLength(arrWords){
+  
+}

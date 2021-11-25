@@ -18,9 +18,7 @@ let persons = [
 // Find the average grade
 let avgGrade;
 for(let grades of persons){
-    let sumOfGrades=0;
-    sumOfGrades+=grades;
-    avgGrade= sumOfGrades/persons.length;
+       
 }
 
 console.log(avgGrade);

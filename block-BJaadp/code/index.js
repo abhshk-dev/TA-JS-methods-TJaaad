@@ -16,24 +16,51 @@ let persons = [
 // NOTE: Use reduce method whereever you can to solve this exercise:
 
 // Find the average grade
-let avgGrade;
-for(let grades of persons){
-       
-}
-
-console.log(avgGrade);
-
+let personsLength=persons.length;
+let totalGrade=persons.reduce((ac,cv)  =>{
+  return ac+cv.grade;
+},0)
+console.log(totalGrade/personsLength);
 // Find the average grade of male
-
+let maleGradeAvg=
+persons.filter((person) => person.sex==='M').
+reduce((ac,cv) =>{
+  return ac+cv.grade;
+},0)/personsLength;
+console.log(maleGradeAvg);
 // Find the average grade of female
-
+let femaleGradeAvg=
+persons.filter((person)=>person.sex==='F').
+reduce((ac,cv) =>{
+  return ac+cv.grade;
+},0)/personsLength;
+console.log(femaleGradeAvg);
 // Find the highest grade
-
+let highest= persons.map((person)=> person.grade).sort((a,b)=> a-b).pop();
+console.log(highest);
 // Find the highest grade in male
-
+let highestMaleGrade=
+persons.filter((person) => person.sex==='M')
+.map((person)=>person.grade)
+.sort((a,b)=>a-b)
+.pop();
+console.log(highestMaleGrade);
 // Find the highest grade in female
-
+let highestFemaleGrade=
+persons.filter((person) => person.sex==='F')
+.map((person)=>person.grade)
+.sort((a,b)=>a-b)
+.pop();
+console.log(highestFemaleGrade);
 // Find the highest grade for people whose name starts with 'J' or 'P'
+const highestGradeJorP=
+persons.filter((person)=> person.name.startsWith('P'))
+.map((person)=>person.grade)
+.sort((a,b)=>a-b)
+.pop();
+console.log(highestGradeJorP);
+
+/*----------------*/
 
 const fruitBasket = [
   'banana',
@@ -57,6 +84,14 @@ that fruit has appeared in the array. Store it in new variable fruitsObj
 Output: 
 {banana: 2, cherry: 3, orange: 3, apple: 2, fig: 1}
 */
+let fruitObj=fruitBasket.reduce((ac,cv)=>{
+ if(ac[cv]){
+   ac[cv]=ac[cv]+1;
+ }else{
+   ac[cv]=1;
+ }
+ return ac;
+},{});
 
 /* 
 
@@ -75,6 +110,11 @@ const data = [
   [10, 11, 12],
 ];
 
+let result=data.reduce((acc,cv)=>{
+  acc=acc.concat(cv);
+  return acc;
+},[])
+console.log(result);
 // Using reduce flat data array
 
 const dataTwo = [
@@ -83,6 +123,11 @@ const dataTwo = [
   [7, 8, 9],
   [[10, 11], 12],
 ];
+
+dataTwo.reduce((acc,cv)=>{
+  acc=acc.concat(cv.flat(Infinity));
+  return acc;
+},[])
 
 // Using reduce flat dataTwo array
 
@@ -107,6 +152,21 @@ let pipeline = [
   increment,
 ];
 
+function increment(num){
+  return num+1;
+}
+function double(num){
+  return num*2;
+}
+function decrement(num){
+  return num-1;
+}
+function triple(num){
+  return num*3;
+}
+function half(num){
+  return Math.round(num/2);
+}
 /*
 Using the pipeline variable that contains the collection of functions, taking the initial value 3 find the output.
 
@@ -120,6 +180,11 @@ EXAMPLE:
 
   ...
 */
+let pipResult=pipeline.reduce((acc,cv)=>{
+  acc=cv(acc);
+  return acc;
+},3)
+console.log(pipResult);
 
 let pipeline2 = [
   increment,
@@ -135,4 +200,11 @@ let pipeline2 = [
   triple,
 ];
 
+
 // Find the output using pipeline2 the initial value if 8
+
+let pipResult2=pipeline2.reduce((acc,cv)=>{
+  acc=cv(acc);
+  return acc;
+},8);
+console.log(pipResult2);
